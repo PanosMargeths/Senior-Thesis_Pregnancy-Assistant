@@ -50,7 +50,7 @@
         android:textAlignment="center"
         android:fontFamily="sans-serif-medium"
         android:textStyle=""
-        android:text="Hello, you are a"
+        android:text="Hello, you are"
         android:textColor="@color/white"
         android:textSize="26sp"
         />
