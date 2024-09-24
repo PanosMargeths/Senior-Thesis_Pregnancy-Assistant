@@ -10,12 +10,12 @@
               <deviceKey>
                 <Key>
                   <type value="VIRTUAL_DEVICE_PATH" />
-                  <value value="C:\Users\CDS Service\.android\avd\Xiaomi_Poco_X5_API_34.avd" />
+                  <value value="C:\Users\CDS Service\.android\avd\Medium_Phone_Edited_API_34.avd" />
                 </Key>
               </deviceKey>
             </Target>
           </targetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2024-08-22T13:39:55.681973100Z" />
+          <timeTargetWasSelectedWithDropDown value="2024-09-24T09:15:41.228824100Z" />
         </State>
       </entry>
     </value>
