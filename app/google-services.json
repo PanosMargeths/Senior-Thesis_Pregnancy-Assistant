@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "931884112146",
+    "project_id": "pregnancy-assistant-fd624",
+    "storage_bucket": "pregnancy-assistant-fd624.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:931884112146:android:c30a2787340d4ed6bdbbcb",
+        "android_client_info": {
+          "package_name": "com.example.pa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz4iBiWEkcQBYbNGCU5-gYPsiKefIIrcg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

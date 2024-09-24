@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:clickable="true"
+    tools:context=".CycleFragment">
+
+    <!-- Female Icon representing the user -->
+
+    <ImageView
+        android:id="@+id/femaleicon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/femaleicon"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="5dp"
+        />
+
+    <!-- Using imageview to set a an image based on the seasson -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Lblue2"
+        android:layout_below="@+id/whitebar"
+        android:layout_alignParentBottom="true"
+        />
+
+    <!-- Textview that shows the name of the user from the users db -->
+
+    <TextView
+        android:id="@+id/hub_usersname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/femaleicon"
+        android:layout_alignTop="@+id/femaleicon"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="4dp"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:text="@string/username"
+        />
+
+    <!-- Textview that shows a text "Health Information" -->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hub_usersname"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle=""
+        android:text="Cycle Information"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        />
+
+    <!-- ImageView used to add a whitebar behind the following Textview's -->
+
+
+    <ImageView
+        android:id="@+id/whitebar"
+        android:layout_width="match_parent"
+        android:layout_height="19dp"
+        android:layout_below="@+id/title"
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        />
+
+    <!-- TextView used to add the month of pregnancy -->
+
+    <TextView
+        android:id="@+id/Month_Type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/whitebar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="center"
+        android:text="July"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+
+
+
+
+    <!-- ImageView used to add a 2nd background with diffrent color -->
+
+    <ImageView
+        android:id="@+id/season_image"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/whitebar"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/blue"
+        />
+
+
+    <!-- ImageView used to add a content background behind the TextView and 2 Textview's used as buttons -->
+
+    <ImageView
+        android:id="@+id/content_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/season_image"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="25dp"
+        android:layout_above="@+id/bottomNavigationView"
+        android:background="@drawable/personalinfo_contentbg"
+        />
+
+    <!-- TextView used to add the title of the content -->
+
+    <TextView
+        android:id="@+id/PregnancyInfomartion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/content_bg"
+        android:layout_alignStart="@+id/content_bg"
+        android:layout_alignEnd="@+id/content_bg"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="Pregnancy information"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:visibility="visible" />
+
+    <!-- TextView used as a button to tranfer the user to the MonthInfoFragment -->
+
+    <TextView
+        android:id="@+id/button_monthinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/PregnancyInfomartion"
+        android:layout_alignStart="@+id/PregnancyInfomartion"
+        android:layout_alignEnd="@+id/PregnancyInfomartion"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/button_monthinfo"
+        />
+
+    <!-- TextView used as a button to tranfer the user to the TrimesterInfoFragment -->
+
+    <TextView
+        android:id="@+id/button_trimisterinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/button_monthinfo"
+        android:layout_alignStart="@+id/button_monthinfo"
+        android:layout_alignEnd="@+id/button_monthinfo"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/button_trimisterinfo"
+        />
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

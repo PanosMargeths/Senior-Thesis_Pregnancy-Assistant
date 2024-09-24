@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    tools:context=".ProfileFragment">
+
+    <!-- Background -->
+
+    <TextView
+        android:id="@+id/profilebackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/settingsbackground"/>
+
+    <!-- Top Background -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/profilebackgroundtop1" />
+
+    <!-- Users Profile Image -->
+
+    <ImageView
+        android:id="@+id/profileusersimage"
+        android:layout_width="100dp"
+        android:layout_height="95dp"
+        android:layout_below="@+id/hubwelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/profileusersimage" />
+
+    <!-- User's Profile Name -->
+
+    <TextView
+        android:id="@+id/profileusersname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/profileusersimage"
+        android:layout_alignStart="@+id/profileusersimage"
+        android:layout_alignEnd="@+id/profileusersimage"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="0dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="users name" />
+
+    <!-- Fragment's Title -->
+
+    <TextView
+        android:id="@+id/hubwelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/profilebackground"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="1.8"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.6"
+        android:text="Settings"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34dp"
+        android:textStyle="bold" />
+
+    <!-- Settings Content Background 1 -->
+
+    <ImageView
+        android:id="@+id/settingscontent1"
+        android:layout_width="wrap_content"
+        android:layout_height="175dp"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/settings_contentbackground1"/>
+
+               <!-- Settings Content 1. Night Mode Switch -->
+               <!-- Night Mode Icon -->
+               <ImageView
+                   android:id="@+id/Nightmode_icon"
+                   android:layout_width="40dp"
+                   android:layout_height="35dp"
+                   android:background="@drawable/settings_nightmode"
+                   android:layout_alignStart="@+id/settingscontent1"
+                   android:layout_alignTop="@+id/settingscontent1"
+                   android:layout_marginTop="15dp"
+                   android:layout_marginLeft="40dp"/>
+
+               <!-- Night Mode Text -->
+               <TextView
+                   android:id="@+id/Nightmode_Text"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignTop="@+id/Nightmode_icon"
+                   android:layout_toEndOf="@+id/Nightmode_icon"
+                   android:layout_alignBottom="@+id/Nightmode_icon"
+                   android:layout_marginLeft="10dp"
+                   android:gravity="center"
+                   android:textSize="20dp"
+                   android:textColor="@color/white"
+                   android:textStyle="bold"
+                   android:text="Night Mode"/>
+
+               <!-- Night Mode Switch -->
+
+               <Switch
+                   android:id="@+id/Nightmode_Switch"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_toEndOf="@+id/Nightmode_Text"
+                   android:layout_alignTop="@+id/Nightmode_icon"
+                   android:layout_alignBottom="@+id/Nightmode_icon"
+                   android:layout_marginLeft="35dp"/>
+
+
+
+
+
+               <!-- Settings Content 2. Notifications Switch -->
+               <!-- Notification Icon -->
+               <ImageView
+                   android:id="@+id/Notification_icon"
+                   android:layout_width="40dp"
+                   android:layout_height="35dp"
+                   android:background="@drawable/settings_notifications"
+                   android:layout_alignStart="@+id/settingscontent1"
+                   android:layout_below="@+id/Nightmode_icon"
+                   android:layout_marginTop="15dp"
+                   android:layout_marginLeft="40dp"/>
+
+               <!-- Night Mode Text -->
+               <TextView
+                   android:id="@+id/Notification_Text"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignTop="@+id/Notification_icon"
+                   android:layout_toEndOf="@+id/Notification_icon"
+                   android:layout_alignBottom="@+id/Notification_icon"
+                   android:layout_marginLeft="10dp"
+                   android:gravity="center"
+                   android:textSize="20dp"
+                   android:textColor="@color/white"
+                   android:textStyle="bold"
+                   android:text="Notifications"/>
+
+               <!-- Notification's Switch -->
+               <Switch
+                   android:id="@+id/Notification_switch"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignStart="@+id/Nightmode_Switch"
+                   android:layout_alignTop="@+id/Notification_icon"
+                   android:layout_alignBottom="@+id/Notification_icon"/>
+
+
+
+
+               <!-- Settings Content 3. Languages Switch -->
+               <!-- Language's Icon -->
+               <ImageView
+                   android:id="@+id/Languages_icon"
+                   android:layout_width="40dp"
+                   android:layout_height="35dp"
+                   android:background="@drawable/settings_languages"
+                   android:layout_alignStart="@+id/settingscontent1"
+                   android:layout_below="@+id/Notification_icon"
+                   android:layout_marginTop="15dp"
+                   android:layout_marginLeft="40dp"/>
+
+               <!-- Language's Text -->
+               <TextView
+                   android:id="@+id/Languages_Text"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignTop="@+id/Languages_icon"
+                   android:layout_toEndOf="@+id/Languages_icon"
+                   android:layout_alignBottom="@+id/Languages_icon"
+                   android:layout_marginLeft="10dp"
+                   android:gravity="center"
+                   android:textSize="20dp"
+                   android:textColor="@color/white"
+                   android:textStyle="bold"
+                   android:text="Languages"/>
+
+               <!-- Language's Arrow -->
+               <ImageView
+                   android:id="@+id/Languages_Arrow"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignStart="@+id/Notification_switch"
+                   android:layout_alignTop="@+id/Languages_icon"
+                   android:layout_alignBottom="@+id/Languages_icon"
+                   android:layout_alignEnd="@+id/Notification_switch"
+                   android:layout_marginEnd="5dp"
+                   android:background="@drawable/arrow_right"/>
+
+
+
+
+    <!-- Settings Content Background 2 -->
+
+    <ImageView
+        android:id="@+id/settingscontent2"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        android:layout_below="@id/settingscontent1"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/settings_contentbackground1"/>
+
+
+               <!-- Settings Content 4. Textsize Switch -->
+               <!-- Textsize's Icon -->
+               <ImageView
+                   android:id="@+id/Textsize_icon"
+                   android:layout_width="40dp"
+                   android:layout_height="35dp"
+                   android:background="@drawable/settings_textsize"
+                   android:layout_alignStart="@+id/settingscontent2"
+                   android:layout_alignTop="@+id/settingscontent2"
+                   android:layout_marginTop="15dp"
+                   android:layout_marginLeft="40dp"/>
+
+               <!-- Textsize's Text -->
+               <TextView
+                   android:id="@+id/Textsize_Text"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignTop="@+id/Textsize_icon"
+                   android:layout_toEndOf="@+id/Textsize_icon"
+                   android:layout_alignBottom="@+id/Textsize_icon"
+                   android:layout_marginLeft="10dp"
+                   android:gravity="center"
+                   android:textSize="20dp"
+                   android:textColor="@color/white"
+                   android:textStyle="bold"
+                   android:text="Text Size"/>
+
+               <!-- Textsize's Arrow -->
+               <ImageView
+                   android:id="@+id/Textsize_Arrow"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignStart="@+id/Languages_Arrow"
+                   android:layout_alignTop="@+id/Textsize_icon"
+                   android:layout_alignBottom="@+id/Textsize_icon"
+                   android:layout_alignEnd="@+id/Languages_Arrow"
+                   android:layout_marginEnd="5dp"
+                   android:background="@drawable/arrow_right"/>
+
+
+
+
+               <!-- Settings Content 5. Logout Switch -->
+               <!-- Logout Icon -->
+               <ImageView
+                   android:id="@+id/DeleteAcc_icon"
+                   android:layout_width="40dp"
+                   android:layout_height="35dp"
+                   android:background="@drawable/settings_deleteaccount"
+                   android:layout_alignStart="@+id/settingscontent2"
+                   android:layout_below="@+id/Textsize_icon"
+                   android:layout_marginTop="15dp"
+                   android:layout_marginLeft="40dp"/>
+
+               <!-- Logout Text -->
+               <TextView
+                   android:id="@+id/DeleteAcc_Text"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignTop="@+id/DeleteAcc_icon"
+                   android:layout_toEndOf="@+id/DeleteAcc_icon"
+                   android:layout_alignBottom="@+id/DeleteAcc_icon"
+                   android:layout_marginLeft="10dp"
+                   android:gravity="center"
+                   android:textSize="20dp"
+                   android:textColor="@color/white"
+                   android:textStyle="bold"
+                   android:text="Delete Account"/>
+
+               <!-- Logout Arrow -->
+               <ImageView
+                   android:id="@+id/DeleteAcc_Arrow"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignStart="@+id/Textsize_Arrow"
+                   android:layout_alignTop="@+id/DeleteAcc_icon"
+                   android:layout_alignBottom="@+id/DeleteAcc_icon"
+                   android:layout_alignEnd="@+id/Textsize_Arrow"
+                   android:layout_marginEnd="5dp"
+                   android:background="@drawable/arrow_right"/>
+
+
+    <!-- Settings Content Background 3 -->
+
+    <ImageView
+        android:id="@+id/settingscontent3"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_below="@id/settingscontent2"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/settings_contentbackground1"/>
+
+               <!-- Settings Content 6. Delete Account Switch -->
+               <!-- Delete Account Icon -->
+               <ImageView
+                   android:id="@+id/Logout_icon"
+                   android:layout_width="40dp"
+                   android:layout_height="35dp"
+                   android:background="@drawable/settings_logout"
+                   android:layout_alignStart="@+id/settingscontent3"
+                   android:layout_alignTop="@+id/settingscontent3"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginLeft="40dp"/>
+
+               <!-- Delete Account Text -->
+    <TextView
+        android:id="@+id/Logout_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_alignTop="@+id/Logout_icon"
+        android:layout_alignBottom="@+id/Logout_icon"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="1dp"
+        android:layout_toEndOf="@+id/Logout_icon"
+        android:gravity="left"
+        android:text="Logout"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+               <!-- Delete Account Arrow -->
+               <TextView
+                   android:id="@+id/Logout_Arrow"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignStart="@+id/DeleteAcc_Arrow"
+                   android:layout_alignTop="@+id/Logout_icon"
+                   android:layout_alignBottom="@+id/Logout_icon"
+                   android:layout_alignEnd="@+id/DeleteAcc_Arrow"
+                   android:layout_marginEnd="5dp"
+                   android:background="@drawable/arrow_right"/>
+
+
+
+
+
+
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>

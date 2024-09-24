@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    android:clickable="true"
+    tools:context=".FoodFragment">
+
+    <ImageView
+        android:id="@+id/femaleicon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/femaleicon" />
+
+    <!-- Using imageview to set a 2nd Background -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/whitebar"
+        android:background="@color/lgreen2" />
+
+    <!-- Textview that shows the name of the user from the users db -->
+
+    <TextView
+        android:id="@+id/hub_usersname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/femaleicon"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="7dp"
+        android:layout_toEndOf="@+id/femaleicon"
+        android:text="@string/username"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <!-- Textview that shows a text "Food Recommendations" -->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hub_usersname"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="sans-serif-medium"
+        android:text="Food Recommendations"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="" />
+
+
+    <!-- ImageView used to display a white background behind the Month_Number -->
+
+    <TextView
+        android:id="@+id/whitebar"
+        android:layout_width="match_parent"
+        android:layout_height="19dp"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="20dp"
+        android:background="@color/white" />
+
+    <!-- TextView that shows a Text "Food Information" with a arrow on the right that
+    also moves you to a diffrent fragment -->
+
+    <TextView
+        android:id="@+id/Month_Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/whitebar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-2dp"
+        android:gravity="center"
+        android:text="Food Information"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:drawableEndCompat="@drawable/arrow_right_black" />
+
+
+
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/whitebar"
+    android:layout_above="@id/bottomNavigationView"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/Breakfast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:text="BreakFast"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@id/Breakfast"
+            android:layout_alignStart="@+id/Breakfast"
+            android:layout_alignEnd="@id/Breakfast"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/hubline" />
+
+    <HorizontalScrollView
+        android:id="@+id/Breakfast_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+            <!-- 1st Breakfast Item -->
+            <!-- 2 Image Views and 1 Text view to create a
+            white background , a background Image , and a Text "Poridge | Fruit" -->
+
+            <ImageView
+                android:id="@+id/breakfast_1"
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="65dp"
+                android:background="@drawable/foodcontentbg" />
+
+            <ImageView
+                android:id="@+id/poridge"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_alignTop="@+id/breakfast_1"
+                android:layout_alignEnd="@+id/breakfast_1"
+                android:layout_alignStart="@+id/breakfast_1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/poridge" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/poridge"
+                android:layout_alignStart="@+id/poridge"
+                android:layout_alignEnd="@id/poridge"
+                android:layout_alignBottom="@+id/breakfast_1"
+                android:layout_marginBottom="7dp"
+                android:text="Poridge | Fruit"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+
+
+
+            <!-- 2nd Breakfast Item -->
+            <!-- 2 Image Views and 1 Text view to create a
+            white background , a background Image , and a Text "Toast | Milk" -->
+
+            <ImageView
+                android:id="@+id/breakfast_2"
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:layout_toEndOf="@+id/breakfast_1"
+                android:layout_alignTop="@+id/breakfast_1"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/foodcontentbg" />
+
+            <ImageView
+                android:id="@+id/toast"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_alignTop="@+id/breakfast_2"
+                android:layout_alignEnd="@+id/breakfast_2"
+                android:layout_alignStart="@+id/breakfast_2"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/toast" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toast"
+                android:layout_alignStart="@+id/toast"
+                android:layout_alignEnd="@id/toast"
+                android:layout_alignBottom="@+id/breakfast_2"
+                android:layout_marginBottom="7dp"
+                android:text="Toast | Milk"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+
+
+            <!-- 3rd Breakfast Item -->
+            <!-- 2 Image Views and 1 Text view to create a
+            white background , a background Image , and a Text "Smoothie" -->
+
+            <ImageView
+                android:id="@+id/breakfast_3"
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:layout_toEndOf="@+id/breakfast_2"
+                android:layout_alignTop="@+id/breakfast_2"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/foodcontentbg" />
+
+            <ImageView
+                android:id="@+id/smoothie"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_alignTop="@+id/breakfast_3"
+                android:layout_alignEnd="@+id/breakfast_3"
+                android:layout_alignStart="@+id/breakfast_3"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/smoothie" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/smoothie"
+                android:layout_alignStart="@+id/smoothie"
+                android:layout_alignEnd="@id/smoothie"
+                android:layout_alignBottom="@+id/breakfast_3"
+                android:layout_marginBottom="7dp"
+                android:text="Smoothie"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+
+
+            <!-- 4th Breakfast Item -->
+            <!-- 2 Image Views and 1 Text view to create a
+            white background , a background Image , and a Text "Eggs | Bagel" -->
+
+            <ImageView
+                android:id="@+id/breakfast_4"
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:layout_toEndOf="@+id/breakfast_3"
+                android:layout_alignTop="@+id/breakfast_3"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/foodcontentbg" />
+
+            <ImageView
+                android:id="@+id/scrambledeggs"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_alignTop="@+id/breakfast_4"
+                android:layout_alignEnd="@+id/breakfast_4"
+                android:layout_alignStart="@+id/breakfast_4"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/scrambledeggs" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scrambledeggs"
+                android:layout_alignStart="@+id/scrambledeggs"
+                android:layout_alignEnd="@id/scrambledeggs"
+                android:layout_alignBottom="@+id/breakfast_3"
+                android:layout_marginBottom="7dp"
+                android:text="Eggs | Bagel"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+
+
+            <!-- 5th Breakfast Item -->
+            <!-- 2 Image Views and 1 Text view to create a
+            white background , a background Image , and a Text "Yogurt | Toppings" -->
+
+            <ImageView
+                android:id="@+id/breakfast_5"
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:layout_toEndOf="@+id/breakfast_4"
+                android:layout_alignTop="@+id/breakfast_4"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/foodcontentbg" />
+
+            <ImageView
+                android:id="@+id/yorgurt"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_alignTop="@+id/breakfast_5"
+                android:layout_alignEnd="@+id/breakfast_5"
+                android:layout_alignStart="@+id/breakfast_5"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/yogurt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/yorgurt"
+                android:layout_alignStart="@+id/yorgurt"
+                android:layout_alignEnd="@id/yorgurt"
+                android:layout_alignBottom="@+id/breakfast_5"
+                android:layout_marginBottom="7dp"
+                android:text="Yogurt | Toppings"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+
+    <TextView
+        android:id="@+id/Lunch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Breakfast_scrollview"
+        android:layout_alignStart="@+id/Breakfast_scrollview"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:text="Lunch"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/line2"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@id/Lunch"
+        android:layout_alignStart="@+id/Lunch"
+        android:layout_alignEnd="@id/Lunch"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/hubline" />
+
+
+    <HorizontalScrollView
+        android:id="@+id/Lunch_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line2"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+            <!-- 1st Lunch Item -->
+            <!-- 2 Image Views and 1 Text view to create a
+            white background , a background Image , and a Text "Fish" -->
+
+            <ImageView
+                android:id="@+id/Lunch_1"
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/foodcontentbg" />
+
+            <ImageView
+                android:id="@+id/fish"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_alignTop="@+id/Lunch_1"
+                android:layout_alignEnd="@+id/Lunch_1"
+                android:layout_alignStart="@+id/Lunch_1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/fish" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fish"
+                android:layout_alignStart="@+id/fish"
+                android:layout_alignEnd="@id/fish"
+                android:layout_alignBottom="@+id/Lunch_1"
+                android:layout_marginBottom="7dp"
+                android:text="Fish"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+
+
+
+            <!-- 2nd Lunch Item -->
+            <!-- 2 Image Views and 1 Text view to create a
+            white background , a background Image , and a Text "Burrito Bowl" -->
+
+            <ImageView
+                android:id="@+id/Lunch_2"
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:layout_toEndOf="@+id/Lunch_1"
+                android:layout_alignTop="@+id/Lunch_1"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/foodcontentbg" />
+
+            <ImageView
+                android:id="@+id/burritobowl"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_alignTop="@+id/Lunch_2"
+                android:layout_alignEnd="@+id/Lunch_2"
+                android:layout_alignStart="@+id/Lunch_2"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/burritobowl" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/burritobowl"
+                android:layout_alignStart="@+id/burritobowl"
+                android:layout_alignEnd="@id/burritobowl"
+                android:layout_alignBottom="@+id/Lunch_2"
+                android:layout_marginBottom="7dp"
+                android:text="Burrito Bowl"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+
+
+            <!-- 3rd Lunch Item -->
+            <!-- 2 Image Views and 1 Text view to create a
+            white background , a background Image , and a Text "Chicken Salad" -->
+
+            <ImageView
+                android:id="@+id/Lunch_3"
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:layout_toEndOf="@+id/Lunch_2"
+                android:layout_alignTop="@+id/Lunch_2"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/foodcontentbg" />
+
+            <ImageView
+                android:id="@+id/chickensald"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_alignTop="@+id/Lunch_3"
+                android:layout_alignEnd="@+id/Lunch_3"
+                android:layout_alignStart="@+id/Lunch_3"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/chickensalad" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chickensald"
+                android:layout_alignStart="@+id/chickensald"
+                android:layout_alignEnd="@id/chickensald"
+                android:layout_alignBottom="@+id/Lunch_3"
+                android:layout_marginBottom="7dp"
+                android:text="Chicken Salad"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+
+
+            <!-- 4th Lunch Item -->
+            <!-- 2 Image Views and 1 Text view to create a
+            white background , a background Image , and a Text "Carrot Soup" -->
+
+            <ImageView
+                android:id="@+id/Lunch_4"
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:layout_toEndOf="@+id/Lunch_3"
+                android:layout_alignTop="@+id/Lunch_3"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/foodcontentbg" />
+
+            <ImageView
+                android:id="@+id/carrotsoup"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_alignTop="@+id/Lunch_4"
+                android:layout_alignEnd="@+id/Lunch_4"
+                android:layout_alignStart="@+id/Lunch_4"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/carrotsoup" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/carrotsoup"
+                android:layout_alignStart="@+id/carrotsoup"
+                android:layout_alignEnd="@id/carrotsoup"
+                android:layout_alignBottom="@+id/Lunch_4"
+                android:layout_marginBottom="7dp"
+                android:text="Carrot Soup"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+
+
+            <!-- 5th Lunch Item -->
+            <!-- 2 Image Views and 1 Text view to create a
+            white background , a background Image , and a Text "Egg Sandwich" -->
+
+            <ImageView
+                android:id="@+id/Lunch_5"
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:layout_toEndOf="@+id/Lunch_4"
+                android:layout_alignTop="@+id/Lunch_4"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/foodcontentbg" />
+
+            <ImageView
+                android:id="@+id/eggsandwich"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_alignTop="@+id/Lunch_5"
+                android:layout_alignEnd="@+id/Lunch_5"
+                android:layout_alignStart="@+id/Lunch_5"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/eggsandwich" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eggsandwich"
+                android:layout_alignStart="@+id/eggsandwich"
+                android:layout_alignEnd="@id/eggsandwich"
+                android:layout_alignBottom="@+id/Lunch_5"
+                android:layout_marginBottom="7dp"
+                android:text="Egg Sandwich"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+
+    <TextView
+        android:id="@+id/Dinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Lunch_scrollview"
+        android:layout_alignStart="@+id/Breakfast_scrollview"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:text="Dinner"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/line3"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@id/Dinner"
+        android:layout_alignStart="@+id/Lunch"
+        android:layout_alignEnd="@id/Lunch"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/hubline" />
+
+
+    <HorizontalScrollView
+        android:id="@+id/Dinner_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/line3"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+            <!-- 1st Dinner Item -->
+            <!-- 2 Image Views and 1 Text view to create a
+            white background , a background Image , and a Text "Rotini Chicken Garden" -->
+
+            <ImageView
+                android:id="@+id/Dinner_1"
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/foodcontentbg" />
+
+            <ImageView
+                android:id="@+id/rotinichickengarden"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_alignTop="@+id/Dinner_1"
+                android:layout_alignEnd="@+id/Dinner_1"
+                android:layout_alignStart="@+id/Dinner_1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/rotinichickengarden" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rotinichickengarden"
+                android:layout_alignStart="@+id/rotinichickengarden"
+                android:layout_alignEnd="@id/rotinichickengarden"
+                android:layout_alignBottom="@+id/Dinner_1"
+                android:layout_marginBottom="7dp"
+                android:text="Rotini Chicken Garden"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+
+
+
+            <!-- 2nd Dinner Item -->
+            <!-- 2 Image Views and 1 Text view to create a
+            white background , a background Image , and a Text "Sesame Vegetable Medley" -->
+
+            <ImageView
+                android:id="@+id/Dinner_2"
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:layout_toEndOf="@+id/Dinner_1"
+                android:layout_alignTop="@+id/Dinner_1"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/foodcontentbg" />
+
+            <ImageView
+                android:id="@+id/sesamevegetablemedley"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_alignTop="@+id/Dinner_2"
+                android:layout_alignEnd="@+id/Dinner_2"
+                android:layout_alignStart="@+id/Dinner_2"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/vegetablemedley" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sesamevegetablemedley"
+                android:layout_alignStart="@+id/sesamevegetablemedley"
+                android:layout_alignEnd="@id/sesamevegetablemedley"
+                android:layout_alignBottom="@+id/Dinner_2"
+                android:layout_marginBottom="7dp"
+                android:text="Sesame Vegetable Medley"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+
+
+            <!-- 3rd Dinner Item -->
+            <!-- 2 Image Views and 1 Text view to create a
+            white background , a background Image , and a CornMeal Crusted Chicken" -->
+
+            <ImageView
+                android:id="@+id/Dinner_3"
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:layout_toEndOf="@+id/Dinner_2"
+                android:layout_alignTop="@+id/Dinner_2"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/foodcontentbg" />
+
+            <ImageView
+                android:id="@+id/CrustedChicken"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_alignTop="@+id/Dinner_3"
+                android:layout_alignEnd="@+id/Dinner_3"
+                android:layout_alignStart="@+id/Dinner_3"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/cornmealchicken" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/CrustedChicken"
+                android:layout_alignStart="@+id/CrustedChicken"
+                android:layout_alignEnd="@id/CrustedChicken"
+                android:layout_alignBottom="@+id/Dinner_3"
+                android:layout_marginBottom="7dp"
+                android:text="CornMeal Crusted Chicken"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+
+
+            <!-- 4th Dinner Item -->
+            <!-- 2 Image Views and 1 Text view to create a
+            white background , a background Image , and a Text "Macaroni and Cheese" -->
+
+            <ImageView
+                android:id="@+id/Dinner_4"
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:layout_toEndOf="@+id/Dinner_3"
+                android:layout_alignTop="@+id/Dinner_3"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/foodcontentbg" />
+
+            <ImageView
+                android:id="@+id/MacaroniCheese"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_alignTop="@+id/Dinner_4"
+                android:layout_alignEnd="@+id/Dinner_4"
+                android:layout_alignStart="@+id/Dinner_4"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/macaronicheese" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/MacaroniCheese"
+                android:layout_alignStart="@+id/MacaroniCheese"
+                android:layout_alignEnd="@id/MacaroniCheese"
+                android:layout_alignBottom="@+id/Dinner_4"
+                android:layout_marginBottom="7dp"
+                android:text="Macaroni and Cheese"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+
+
+            <!-- 5th Dinner Item -->
+            <!-- 2 Image Views and 1 Text view to create a
+            white background , a background Image , and a Text "Homemade Beef Stew" -->
+
+            <ImageView
+                android:id="@+id/Dinner_5"
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:layout_toEndOf="@+id/Dinner_4"
+                android:layout_alignTop="@+id/Dinner_4"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/foodcontentbg" />
+
+            <ImageView
+                android:id="@+id/BeefStew"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_alignTop="@+id/Dinner_5"
+                android:layout_alignEnd="@+id/Dinner_5"
+                android:layout_alignStart="@+id/Dinner_5"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/beefstew" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/BeefStew"
+                android:layout_alignStart="@+id/BeefStew"
+                android:layout_alignEnd="@id/BeefStew"
+                android:layout_alignBottom="@+id/Dinner_5"
+                android:layout_marginBottom="7dp"
+                android:text="Homemade Beef Stew"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+
+        </RelativeLayout>
+    </HorizontalScrollView>
+    </RelativeLayout>
+</ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue"
+    android:clickable="true"
+    tools:context=".MonthInfoFragment">
+
+    <ImageView
+        android:id="@+id/femaleicon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/femaleicon" />
+
+    <!-- Using imageview to set a 2nd Background -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/whitebar"
+        android:background="@color/blue2" />
+
+    <!-- Textview that shows the name of the user from the users db -->
+
+    <TextView
+        android:id="@+id/hub_usersname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/femaleicon"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="7dp"
+        android:layout_toEndOf="@+id/femaleicon"
+        android:text="@string/username"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <!-- Textview that shows a text "Month Information" -->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hub_usersname"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="sans-serif-medium"
+        android:text="Month Information"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="" />
+
+    <!-- Textview that is used as a to display the months number with a white background -->
+
+
+    <ImageView
+        android:id="@+id/whitebar"
+        android:layout_width="match_parent"
+        android:layout_height="19dp"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="20dp"
+        android:background="@color/white" />
+
+
+
+    <TextView
+        android:id="@+id/Month_Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/whitebar"
+        android:layout_marginTop="-2dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:text="1st Month"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/whitebar"
+        android:layout_above="@+id/bottomNavigationView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <!-- Cardview widget used to add a cyan color background on the contents of the ScrollView -->
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="20dp"
+            >
+
+        <!-- RelativeLayout inside CardView to align the contets of Cardview -->
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:id="@+id/content_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/backshape6"
+            >
+
+
+
+
+
+            <!-- CATEGORY   1! -->
+            <!-- Total of 2 Textviews used to create a Category1 text + 1 Text1 text -->
+
+            <TextView
+                android:id="@+id/Month_Category1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="15dp"
+                android:text="Category1"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+
+
+            <TextView
+                android:id="@+id/Category1_Text_1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Month_Category1"
+                android:layout_alignStart="@+id/Month_Category1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="3dp"
+                android:layout_marginTop="15dp"
+                android:text="Text1"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+
+
+
+
+
+            <!-- CATEGORY   2! -->
+            <!-- Total of 4 Textviews used to create a Category2 text + 3 Text1-3 text -->
+
+            <TextView
+                android:id="@+id/Month_Category2"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Category1_Text_1"
+                android:layout_alignStart="@+id/Month_Category1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="3dp"
+                android:layout_marginTop="15dp"
+                android:text="Category2"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+
+
+            <TextView
+                android:id="@+id/Category2_Text_1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Month_Category2"
+                android:layout_alignStart="@+id/Month_Category1"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="3dp"
+                android:text="Text1"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/Category2_Text_2"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Category2_Text_1"
+                android:layout_alignStart="@+id/Month_Category1"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="3dp"
+                android:text="Text2"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/Category2_Text_3"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Category2_Text_2"
+                android:layout_alignStart="@+id/Month_Category1"
+                android:layout_marginTop="15dp"
+                android:text="Text3"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="3dp"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+
+
+            <!-- CATEGORY   3! -->
+            <!-- Total of 4 Textviews used to create a Category3 text + 3 Text1-3 text -->
+
+            <TextView
+                android:id="@+id/Month_Category3"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Category2_Text_3"
+                android:layout_alignStart="@+id/Month_Category1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="3dp"
+                android:layout_marginTop="15dp"
+                android:text="Category3"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+
+
+            <TextView
+                android:id="@+id/Category3_Text_1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Month_Category3"
+                android:layout_alignStart="@+id/Month_Category1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="3dp"
+                android:layout_marginTop="15dp"
+                android:text="Text1"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/Category3_Text_2"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Category3_Text_1"
+                android:layout_alignStart="@+id/Month_Category1"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="3dp"
+                android:text="Text2"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+
+
+
+
+
+            <!-- CATEGORY   4! -->
+            <!-- Total of 4 Textviews used to create a Category4 text + 3 Text1-3 text -->
+
+            <TextView
+                android:id="@+id/Month_Category4"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Category3_Text_2"
+                android:layout_alignStart="@+id/Month_Category1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="3dp"
+                android:layout_marginTop="15dp"
+                android:text="Category4"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+
+
+
+            <TextView
+                android:id="@+id/Category4_Text_1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Month_Category4"
+                android:layout_alignStart="@+id/Month_Category1"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="3dp"
+                android:text="Text1"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/Category4_Text_2"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Category4_Text_1"
+                android:layout_alignStart="@+id/Month_Category1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="3dp"
+                android:layout_marginTop="15dp"
+                android:text="Text2"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+
+
+
+
+
+
+
+            <!-- CATEGORY   5! -->
+            <!-- Total of 4 Textviews used to create a Category5 text + 3 Text1-3 text -->
+
+            <TextView
+                android:id="@+id/Month_Category5"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Category4_Text_2"
+                android:layout_alignStart="@+id/Month_Category1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="3dp"
+                android:layout_marginTop="15dp"
+                android:text="Category5"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+
+
+
+            <TextView
+                android:id="@+id/Category5_Text_1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Month_Category5"
+                android:layout_alignStart="@+id/Month_Category1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="3dp"
+                android:layout_marginTop="15dp"
+                android:text="Text1"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+
+              </RelativeLayout>
+           </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Personal_InfoFragment"
+    android:clickable="true"
+    android:background="@color/blue">
+
+    <!-- Female Icon representing the user -->
+
+    <ImageView
+        android:id="@+id/femaleicon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/femaleicon"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="5dp"
+        />
+
+    <!-- Using imageview to set a 2nd Background -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Lblue2"
+        android:layout_below="@+id/hello"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentBottom="true"
+        />
+
+    <!-- Textview that shows the name of the user from the users db -->
+
+    <TextView
+        android:id="@+id/hub_usersname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/femaleicon"
+        android:layout_alignTop="@+id/femaleicon"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="4dp"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:text="@string/username"
+        />
+
+    <!-- Textview that shows a text "Health Information" -->
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hub_usersname"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle=""
+        android:text="Health Information"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        />
+
+    <!-- Textview that is used as a button to switch fragment to EditHealthInfo -->
+
+    <TextView
+        android:id="@+id/Editinfo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_below="@+id/hello"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:text="Edit health Info"
+        android:drawableRight="@drawable/arrow_right_black"
+        android:textSize="13sp"
+        android:gravity="center"
+        />
+
+    <!-- Textview that shows a text "You have no Health Problems" when the user has No to all Health info -->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="604dp"
+        android:layout_below="@+id/Editinfo_button"
+        android:layout_above="@+id/bottomNavigationView">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- Start of Epilepsy -->
+            <!-- Image View used to add the content background for the Epilepsy Info -->
+
+            <ImageView
+                android:id="@+id/Epilespy_bg"
+                android:layout_width="300dp"
+                android:layout_height="550dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/personalinfo_contentbg"
+                />
+
+            <!-- TextView used to add the title of the content -->
+
+            <TextView
+                android:id="@+id/NoHealthP_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/Epilespy_bg"
+                android:layout_alignEnd="@+id/Epilespy_bg"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="Epilepsy"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:visibility="visible" />
+
+            <!-- TextView used to add the first Category of the epilepsy info -->
+
+            <TextView
+                android:id="@+id/Epilespy_Category1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/NoHealthP_title"
+                android:layout_alignStart="@+id/NoHealthP_title"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="Category1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <!-- TextView used to add the first information of the epilepsy info -->
+
+            <TextView
+                android:id="@+id/Epilepsy_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Epilespy_Category1"
+                android:layout_alignStart="@+id/NoHealthP_title"
+                android:layout_alignEnd="@+id/NoHealthP_title"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:text="test"
+                />
+
+            <!-- TextView used to add the second Category of the epilepsy info -->
+
+            <TextView
+                android:id="@+id/Epilespy_Category2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Epilepsy_text1"
+                android:layout_alignStart="@+id/NoHealthP_title"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="Category1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <!-- TextView used to add the second information of the epilepsy info -->
+
+            <TextView
+                android:id="@+id/Epilepsy_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Epilespy_Category2"
+                android:layout_alignStart="@+id/NoHealthP_title"
+                android:layout_alignEnd="@+id/NoHealthP_title"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:text="test2"
+                />
+
+            <!-- TextView used to add the third Category of the epilepsy info -->
+
+            <TextView
+                android:id="@+id/Epilepsy_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Epilepsy_text2"
+                android:layout_alignStart="@+id/NoHealthP_title"
+                android:layout_alignEnd="@+id/NoHealthP_title"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:text="test3"
+                />
+
+            <!-- End of Epilepsy Information -->
+
+
+
+
+
+            <!-- Start of Blood Pressure -->
+            <!-- Image View used to add the content background for the Blood Pressure -->
+
+            <ImageView
+                android:id="@+id/BloodP_bg"
+                android:layout_width="300dp"
+                android:layout_height="550dp"
+                android:layout_below="@+id/Epilespy_bg"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/personalinfo_contentbg"
+                />
+
+            <!-- TextView used to add the title of the content -->
+
+            <TextView
+                android:id="@+id/BloodP_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/BloodP_bg"
+                android:layout_alignEnd="@+id/BloodP_bg"
+                android:layout_alignTop="@+id/BloodP_bg"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="Blood Pressure"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:visibility="visible" />
+
+            <!-- TextView used to add the first Category of the Blood Pressure info -->
+
+            <TextView
+                android:id="@+id/BloodP_Category1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/BloodP_title"
+                android:layout_alignStart="@+id/BloodP_title"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="Category1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <!-- TextView used to add the first information of the Blood Pressure info -->
+
+            <TextView
+                android:id="@+id/BloodP_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/BloodP_Category1"
+                android:layout_alignStart="@+id/BloodP_title"
+                android:layout_alignEnd="@+id/BloodP_title"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:text="test1"
+                />
+
+            <!-- TextView used to add the first information of the Blood Pressure info -->
+
+            <TextView
+                android:id="@+id/BloodP_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/BloodP_text1"
+                android:layout_alignStart="@+id/BloodP_title"
+                android:layout_alignEnd="@+id/BloodP_title"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:text="test2"
+                />
+
+            <!-- TextView used to add the second Category of the Blood Pressure info -->
+
+            <TextView
+                android:id="@+id/BloodP_Category2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/BloodP_text2"
+                android:layout_alignStart="@+id/BloodP_title"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="Category2"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <!-- TextView used to add the second information of the Blood Pressure info -->
+
+            <TextView
+                android:id="@+id/BloodP_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/BloodP_Category2"
+                android:layout_alignStart="@+id/BloodP_title"
+                android:layout_alignEnd="@+id/BloodP_title"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:text="test3"/>
+
+            <!-- TextView used to add the third Category of the Blood Pressure info -->
+
+            <TextView
+                android:id="@+id/BloodP_text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/BloodP_text3"
+                android:layout_alignStart="@+id/BloodP_title"
+                android:layout_alignEnd="@+id/BloodP_title"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:text=""
+                />
+
+            <!-- End of Blood Pressure Information -->
+
+
+
+
+
+            <!-- Start of Diabetes -->
+            <!-- Image View used to add the content background for the Diabetes -->
+
+            <ImageView
+                android:id="@+id/Diabetes_bg"
+                android:layout_width="300dp"
+                android:layout_height="575dp"
+                android:layout_below="@+id/BloodP_bg"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/personalinfo_contentbg"
+                />
+
+            <!-- TextView used to add the title of the content -->
+
+            <TextView
+                android:id="@+id/Diabetes_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/Diabetes_bg"
+                android:layout_alignEnd="@+id/Diabetes_bg"
+                android:layout_alignTop="@+id/Diabetes_bg"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="Diabetes"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:visibility="visible" />
+
+            <!-- TextView used to add the first Category of the Diabetes info -->
+
+            <TextView
+                android:id="@+id/Diabetes_Category1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Diabetes_title"
+                android:layout_alignStart="@+id/Diabetes_title"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="Category1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <!-- TextView used to add the first information of the Diabetes info -->
+
+            <TextView
+                android:id="@+id/Diabetes_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Diabetes_Category1"
+                android:layout_alignStart="@+id/Diabetes_title"
+                android:layout_alignEnd="@+id/Diabetes_title"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:text="test1"
+                />
+
+            <!-- TextView used to add the first information of the Diabetes info -->
+
+            <TextView
+                android:id="@+id/Diabetes_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Diabetes_text1"
+                android:layout_alignStart="@+id/Diabetes_title"
+                android:layout_alignEnd="@+id/Diabetes_title"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:text="test3"
+                />
+
+            <!-- TextView used to add the second Category of the Diabetes info -->
+
+            <TextView
+                android:id="@+id/Diabetes_Category2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Diabetes_text2"
+                android:layout_alignStart="@+id/Diabetes_title"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="Category2"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <!-- TextView used to add the second information of the Diabetes info -->
+
+            <TextView
+                android:id="@+id/Diabetes_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Diabetes_Category2"
+                android:layout_alignStart="@+id/Diabetes_title"
+                android:layout_alignEnd="@+id/Diabetes_title"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:text="test3"
+                />
+
+            <!-- TextView used to add the third Category of the Diabetes info -->
+
+            <TextView
+                android:id="@+id/Diabetes_text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/BloodP_text3"
+                android:layout_alignStart="@+id/Diabetes_title"
+                android:layout_alignEnd="@+id/Diabetes_title"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:text=""
+                />
+
+            <!-- End of Diabetes Information -->
+
+
+
+
+
+
+
+
+
+            <!-- Start of Obese -->
+            <!-- Image View used to add the content background for the Obese -->
+
+            <ImageView
+                android:id="@+id/Obese_bg"
+                android:layout_width="300dp"
+                android:layout_height="550dp"
+                android:layout_below="@+id/Diabetes_bg"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/personalinfo_contentbg"
+                />
+
+            <!-- TextView used to add the title of the content -->
+
+            <TextView
+                android:id="@+id/Obese_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/Obese_bg"
+                android:layout_alignEnd="@+id/Obese_bg"
+                android:layout_alignTop="@+id/Obese_bg"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="Obese"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:visibility="visible" />
+
+            <!-- TextView used to add the first Category of the Obese info -->
+
+            <TextView
+                android:id="@+id/Obese_Category1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Obese_title"
+                android:layout_alignStart="@+id/Obese_title"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="Category1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <!-- TextView used to add the first information of the Obese info -->
+
+            <TextView
+                android:id="@+id/Obese_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Obese_Category1"
+                android:layout_alignStart="@+id/Obese_title"
+                android:layout_alignEnd="@+id/Obese_title"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:text="test1"
+                />
+
+            <!-- TextView used to add the first information of the Obese info -->
+
+            <TextView
+                android:id="@+id/Obese_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Obese_text1"
+                android:layout_alignStart="@+id/Obese_title"
+                android:layout_alignEnd="@+id/Obese_title"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:text="test2"
+                />
+
+            <!-- TextView used to add the second Category of the Obese info -->
+
+            <TextView
+                android:id="@+id/Obese_Category2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Obese_text2"
+                android:layout_alignStart="@+id/Obese_title"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="Category2"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <!-- TextView used to add the second information of the Obese info -->
+
+            <TextView
+                android:id="@+id/Obese_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Obese_Category2"
+                android:layout_alignStart="@+id/Obese_title"
+                android:layout_alignEnd="@+id/Obese_title"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:text="test3"
+                />
+
+            <!-- TextView used to add the third Category of the Obese info -->
+
+            <TextView
+                android:id="@+id/Obese_text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Obese_text3"
+                android:layout_alignStart="@+id/Obese_title"
+                android:layout_alignEnd="@+id/Obese_title"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:text="test4"
+                />
+
+            <!-- End of Obese Information -->
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

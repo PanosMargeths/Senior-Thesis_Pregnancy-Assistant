@@ -1,0 +1,470 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:clickable="true"
+    android:filterTouchesWhenObscured="false"
+    android:fitsSystemWindows="false"
+    android:orientation="vertical"
+    tools:context=".HomeFragment">
+
+    <!-- Female Icon representing the user -->
+
+    <ImageView
+        android:id="@+id/femaleicon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/femaleicon"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="5dp"
+        />
+
+    <!-- Textview that shows the name of the user from the users db -->
+
+    <TextView
+        android:id="@+id/hub_usersname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/femaleicon"
+        android:layout_alignTop="@+id/femaleicon"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="4dp"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:text="@string/username"
+        />
+
+    <!-- Textview that shows a text "Hello, you are" -->
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hub_usersname"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle=""
+        android:text="Hello, you are"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        />
+
+    <!-- Textview that shows the users pregnancy start date from the pregnancy_data db -->
+
+    <TextView
+        android:id="@+id/users_startdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hello"
+        android:layout_alignStart="@+id/hub_contentbg"
+        android:layout_alignEnd="@+id/hello"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="280dp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle=""
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        />
+
+    <TextView
+        android:id="@+id/users_startdate_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hello"
+        android:layout_alignStart="@id/users_startdate"
+        android:layout_marginStart="35dp"
+        android:layout_alignEnd="@+id/hub_contentbg"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-medium"
+        android:text="weeks pregnant"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        />
+
+    <!-- ImageView that shows a small background accessed from @drawable/backshape5 -->
+
+    <ImageView
+        android:id="@+id/hub_databg1"
+        android:layout_width="365dp"
+        android:layout_height="76dp"
+        android:background="@drawable/backshape5"
+        android:layout_below="@+id/users_startdate"
+        android:layout_alignStart="@+id/hello"
+        android:layout_alignEnd="@+id/hello"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        />
+
+    <!-- Textview that shows the users remaining days of the pregnancy from the pregnancy_data db -->
+
+    <TextView
+        android:id="@+id/users_remainingdays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/hub_databg1"
+        android:layout_alignStart="@+id/hub_databg1"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="190"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        />
+
+    <!-- Textview that shows a text "Days Left" -->
+
+    <TextView
+        android:id="@+id/daysleft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/users_remainingdays"
+        android:layout_alignStart="@+id/users_remainingdays"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="0dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Days Left"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        />
+
+    <!-- ImageView 1 that shows 1/50dp line in the hub_databg1 -->
+
+    <ImageView
+        android:id="@+id/hub_line1"
+        android:layout_width="1dp"
+        android:layout_height="50dp"
+        android:background="@drawable/backline"
+        android:layout_alignTop="@+id/hub_databg1"
+        android:layout_toEndOf="@+id/daysleft"
+        android:layout_alignBottom="@+id/hub_databg1"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="22dp"
+
+        />
+
+    <!-- TextView that shows the starting date of the users pregnancy from pregnancy_data in db -->
+
+    <TextView
+        android:id="@+id/users_startdate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pregnancy_startdate"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        />
+
+    <!-- Textview that shows a text "Start date" -->
+
+    <TextView
+        android:id="@+id/pregnancy_startdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/users_remainingdays"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Start date"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <!-- ImageView 2 that shows a 1dp/50dp line in the hub_databg1 -->
+
+    <ImageView
+        android:id="@+id/hub_line2"
+        android:layout_width="1dp"
+        android:layout_height="50dp"
+        android:background="@drawable/backline"
+        android:layout_alignTop="@+id/hub_databg1"
+        android:layout_alignStart="@+id/users_pgmonth"
+        android:layout_alignBottom="@+id/hub_databg1"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="-20dp"
+        />
+
+    <!-- Textview that shows the users remaining days of the pregnancy from the pregnancy_data db -->
+
+    <TextView
+        android:id="@+id/users_pgmonth"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/hub_databg1"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignEnd="@+id/hub_databg1"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Textview that shows a text "Days Left" -->
+
+    <TextView
+        android:id="@+id/Month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/users_remainingdays"
+        android:layout_alignStart="@id/users_pgmonth"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="0dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Birth Date"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        />
+
+    <!-- ImageView that shows a Background Image from @drawables/hub_contentbg
+    works as a content background -->
+
+    <ImageView
+        android:id="@+id/hub_contentbg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/hub_contentbg"
+        android:layout_below="@id/hub_databg1"
+        android:layout_alignStart="@+id/hub_databg1"
+        android:layout_alignEnd="@+id/hub_databg1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@+id/personalinfobutton"
+        />
+
+    <ImageView
+        android:id="@+id/baby"
+        android:layout_width="wrap_content"
+        android:layout_height="175dp"
+        android:layout_alignStart="@id/hub_contentbg"
+        android:layout_alignTop="@id/hub_contentbg"
+        android:layout_alignEnd="@id/hub_contentbg"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/baby" />
+    <!-- Textview that shows a text "Pregnancy information" -->
+
+    <TextView
+        android:id="@+id/pregnancyinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/hub_contentbg"
+        android:layout_below="@+id/baby"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textAlignment="textStart"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="bold"
+        android:text="Pregnancy information"
+        />
+
+    <!-- Textview that shows a text "Age" -->
+
+    <TextView
+        android:id="@+id/text_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pregnancyinfo"
+        android:layout_alignStart="@+id/pregnancyinfo"
+        android:layout_marginTop="10dp"
+        android:text="Age :"
+        />
+
+    <!-- Textview that shows the age of the user from the pregnancy_data db -->
+
+    <TextView
+        android:id="@+id/result_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text_age"
+        android:layout_alignStart="@+id/result_weight"
+        />
+
+
+
+    <!-- Textview that shows a text "Weight" -->
+
+    <TextView
+        android:id="@+id/text_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_age"
+        android:layout_alignStart="@+id/pregnancyinfo"
+        android:layout_marginTop="10dp"
+        android:text="Weight :"
+        />
+
+    <!-- Textview that shows the Weight of the user from the pregnancy_data db -->
+
+    <TextView
+        android:id="@+id/result_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text_weight"
+        android:layout_toEndOf="@id/text_weight"
+        android:layout_marginStart="15dp"
+
+        />
+
+    <!-- Textview that shows a text "Health" -->
+
+    <TextView
+        android:id="@+id/text_health"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_weight"
+        android:layout_alignStart="@+id/pregnancyinfo"
+        android:layout_marginTop="15dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="Health"
+        />
+
+
+    <!-- Textview that shows a text "Blood Pressure" -->
+
+    <TextView
+        android:id="@+id/text_bp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_health"
+        android:layout_alignStart="@+id/pregnancyinfo"
+        android:layout_marginTop="10dp"
+        android:text="Blood Pressure :"
+        />
+
+    <!-- Textview that shows the Blood Pressure of the user from the pregnancy_data db -->
+
+    <TextView
+        android:id="@+id/result_bp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text_bp"
+        android:layout_toEndOf="@id/text_bp"
+        android:layout_marginStart="15dp"
+
+        />
+
+    <!-- Textview that shows a text "Epilepsy" -->
+
+    <TextView
+        android:id="@+id/text_epilepsy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_bp"
+        android:layout_alignStart="@+id/pregnancyinfo"
+        android:layout_marginTop="10dp"
+        android:text="Epilepsy :"
+        />
+
+    <!-- Textview that shows the Epilepsy of the user from the pregnancy_data db -->
+
+    <TextView
+        android:id="@+id/result_epilepsy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/result_bp"
+        android:layout_alignTop="@+id/text_epilepsy"
+        />
+
+    <!-- Textview that shows a text "Diabetes" -->
+
+    <TextView
+        android:id="@+id/text_diabetes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_epilepsy"
+        android:layout_alignStart="@+id/pregnancyinfo"
+        android:layout_marginTop="10dp"
+        android:text="Diabetes :"
+        />
+
+    <!-- Textview that shows the Diabetes of the user from the pregnancy_data db -->
+
+    <TextView
+        android:id="@+id/result_diabetes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text_diabetes"
+        android:layout_alignStart="@+id/result_bp"
+        />
+
+    <!-- Textview that shows a text "Obese" -->
+
+    <TextView
+        android:id="@+id/text_obese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_diabetes"
+        android:layout_alignStart="@+id/pregnancyinfo"
+        android:layout_marginTop="10dp"
+        android:text="Obese :"
+        />
+
+    <!-- Textview that shows the Diabetes of the user from the pregnancy_data db -->
+
+    <TextView
+        android:id="@+id/result_obese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text_obese"
+        android:layout_alignStart="@+id/result_bp"
+        />
+
+    <!-- Textview that is used as a button to switch fragment to personalfeedbackfragment -->
+
+    <TextView
+        android:id="@+id/personalinfobutton"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_alignStart="@+id/hub_databg1"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/personalinfobutton"
+        />
+
+    <!-- Textview that is used as a button to switch fragment to personalfeedbackfragment -->
+
+    <TextView
+        android:id="@+id/cyclebutton"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_alignEnd="@+id/hub_databg1"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/cyclebutton"
+        />
+
+    <!-- Bottom Navigation bar used to switch between diffrent Fragments -->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"/>
+
+</RelativeLayout>

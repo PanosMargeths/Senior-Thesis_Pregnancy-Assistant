@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:isScrollContainer="false"
+
+    tools:context=".ProfileEditData">
+
+    <TextView
+        android:id="@+id/profilebackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/profilebackground"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginTop="-2dp"
+        android:background="@drawable/profilebackgroundtop1" />
+
+    <TextView
+        android:id="@+id/profileusersimage"
+        android:layout_width="115dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/hubwelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-70dp"
+        android:background="@drawable/profileusersimage" />
+
+    <ImageView
+        android:id="@+id/profiledatabg"
+        android:layout_width="250dp"
+        android:layout_height="350dp"
+        android:layout_below="@+id/profileusersimage"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/editbutton"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="-25dp"
+        android:background="@drawable/profiledatabg1" />
+
+    <TextView
+        android:id="@+id/hubwelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-28dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="1.8"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.6"
+        android:text="Update Profile"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/profiledata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/profiledatabg"
+        android:layout_alignStart="@+id/profiledatabg"
+        android:layout_alignEnd="@+id/profiledatabg"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="05dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Account Info"
+        android:textColor="@color/black"
+        android:textSize="28sp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="200dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/profiledata"
+        android:layout_alignEnd="@+id/profiledata"
+        android:layout_alignStart="@+id/profiledata"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/hubline" />
+
+
+    <ImageView
+        android:id="@+id/profilenameicon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/profile"
+        android:layout_alignStart="@+id/profiledata"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/imageView2"/>
+
+    <EditText
+        android:id="@+id/profilesname"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignStart="@+id/profilenameicon"
+        android:layout_alignEnd="@+id/profiledatabg"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="25dp"
+        android:hint="username"
+        android:padding="8dp"
+        android:background="@drawable/backshape3"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+
+
+    <ImageView
+        android:id="@+id/profilecountryicon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/location"
+        android:layout_alignStart="@+id/profilenameicon"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/profilenameicon"/>
+
+    <EditText
+        android:id="@+id/profilecountry"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@+id/profilenameicon"
+        android:layout_alignStart="@+id/profilecountryicon"
+        android:layout_alignEnd="@id/profiledatabg"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="55dp"
+        android:padding="8dp"
+        android:background="@drawable/backshape3"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:hint="country"/>
+
+
+
+
+    <EditText
+        android:id="@+id/profilepassword"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@+id/profilecountry"
+        android:layout_toEndOf="@+id/profilepasswordicon"
+        android:layout_alignEnd="@id/profiledatabg"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="30dp"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:background="@drawable/backshape3"
+        android:textSize="16dp"
+        android:hint="password"
+        />
+
+
+    <ImageView
+        android:id="@+id/profilepasswordicon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/password"
+        android:layout_alignStart="@+id/profilecountryicon"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/profilecountryicon"/>
+
+
+
+    <Button
+        android:id="@+id/editbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_alignStart="@+id/profiledatabg"
+        android:layout_alignEnd="@+id/profiledatabg"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="45dp"
+        android:background="@drawable/custom_edittext"
+        android:text="Edit Information"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+
+
+
+
+</RelativeLayout>

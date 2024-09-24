@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    android:clickable="true"
+    tools:context=".FoodInfoFragment">
+
+    <ImageView
+        android:id="@+id/femaleicon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/femaleicon" />
+
+    <!-- Using imageview to set a 2nd Background -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/whitebar"
+        android:background="@color/lgreen" />
+
+    <!-- Textview that shows the name of the user from the users db -->
+
+    <TextView
+        android:id="@+id/hub_usersname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/femaleicon"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="7dp"
+        android:layout_toEndOf="@+id/femaleicon"
+        android:text="@string/username"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <!-- Textview that shows a text "Food Information" -->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hub_usersname"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="sans-serif-medium"
+        android:text="Food Information"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="" />
+
+
+    <!-- ImageView used to display a white background behind the Month_Number -->
+
+    <TextView
+        android:id="@+id/whitebar"
+        android:layout_width="match_parent"
+        android:layout_height="19dp"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="20dp"
+        android:background="@color/white" />
+
+    <!-- TextView that shows a Text "Food Information" with a arrow on the right that
+    also moves you to a diffrent fragment -->
+
+    <TextView
+        android:id="@+id/Month_Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/whitebar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-2dp"
+        android:gravity="center"
+        android:text="Food Information"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:drawableEndCompat="@drawable/arrow_right_black" />
+
+    <!-- Scrollview used to be able to scroll down through the information of the food -->
+    <!-- Includes Cardview for background and TextViews to display text from database through Firebase -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNavigationView"
+        android:layout_below="@id/whitebar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- ImageView used to display the image of the specific food the user chose -->
+
+            <ImageView
+                android:id="@+id/foodimage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@color/green" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/foodimage"
+                android:layout_alignStart="@+id/foodimage"
+                android:layout_alignEnd="@+id/foodimage"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="15dp"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp">
+
+
+                    <!-- Category 1 of Food Information -->
+                    <!-- Includes 1 TextView that displays the text1 of the category from database -->
+
+                    <TextView
+                        android:id="@+id/Category1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+
+
+                    <TextView
+                        android:id="@+id/Category1_Text_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Category1"
+                        android:layout_marginTop="10dp  "
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/Category1_Text_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Category1_Text_1"
+                        android:layout_marginTop="10dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/Category1_Text_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Category1_Text_2"
+                        android:layout_marginTop="10dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+
+
+
+
+                    <!-- Category 2 of Food Information -->
+                    <!-- Includes 2 TextView that displays the text1 and text 2 of the category from database -->
+
+                    <TextView
+                        android:id="@+id/Category2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Category1_Text_3"
+                        android:layout_marginTop="15dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+
+
+                    <TextView
+                        android:id="@+id/Category2_Text_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Category2"
+                        android:layout_marginTop="10dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/Category2_Text_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Category2_Text_1"
+                        android:layout_marginTop="10dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/Category2_Text_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Category2_Text_2"
+                        android:layout_marginTop="10dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+
+
+
+
+                    <!-- Category 3 of Food Information -->
+                    <!-- Includes 6 TextView that displays the text1 of the category from database -->
+
+                    <TextView
+                        android:id="@+id/Category3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Category2_Text_3"
+                        android:layout_marginTop="15dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/Category3_Text_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Category3"
+                        android:layout_marginTop="10dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/Category3_Text_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Category3_Text_1"
+                        android:layout_marginTop="10dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/Category3_Text_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Category3_Text_2"
+                        android:layout_marginTop="10dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">P.A Πτυχιακη</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="signup">SignUp</string>
+    <string name="pregnancy_assistant">Pregnancy Assistant</string>
+    <string name="already_have_an_account_login_now">Already have an account? Login Now</string>
+    <string name="submit">Submit</string>
+    <string name="loginpassword">Password</string>
+    <string name="loginemail">Email</string>
+    <string name="login">Login</string>
+    <string name="loginpregnancy_assistant">Pregnancy Assistant</string>
+    <string name="logout">Logout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hub">HUB</string>
+    <string name="username">username</string>
+    <string name="country">country</string>
+    <string name="health">Health</string>
+    <string name="general">General</string>
+    <string name="diabetes">Diabetes</string>
+    <string name="yes_no">Yes/No</string>
+    <string name="obese">Obese</string>
+    <string name="enter_information">Enter Information</string>
+    <string name="weight">Weight</string>
+    <string name="enter_age">enter age</string>
+    <string name="enter_weight_in_kilos">enter weight in kilos</string>
+    <string name="pick_date">pick date</string>
+
+    <string-array name="selection">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+</resources>
+
