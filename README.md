@@ -18,4 +18,4 @@ The purpose of this project is to assist woman in their pregnancy by doing a few
 ## Some Images From the App
 
 <img align="left" alt="Java" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"/>
-<img align="left" height="100px" width="50px" src="https://github.com/user-attachments/assets/d627263c-fc67-4da1-bfe1-329c79bb3190"/>
+<img align="left" height="250px" width="150px" src="https://github.com/user-attachments/assets/d627263c-fc67-4da1-bfe1-329c79bb3190"/>
