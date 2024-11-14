@@ -11,7 +11,7 @@ The purpose of this project is to assist woman in their pregnancy by doing a few
 - Provides Information based on health problems during the pregnancy.
 - Provides Information for each month of the pregnancy.
 - Provides Information for each trimester of the pregnancy.
-- Recommends Foods and drings that are good for pregnancy for each meal of the day.
+- Recommends Foods and drinks that are good for pregnancy for each meal of the day.
 - Provides Information for what Foods , Drinks and other stuff the woman shouldnt be consuming or should lower the times of consuption witch specific information on why.
 
 
