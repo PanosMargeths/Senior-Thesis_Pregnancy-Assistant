@@ -1,6 +1,6 @@
 # **Pregnancy Assistant**
 
-<img  height="450px" width="300px" src="https://github.com/user-attachments/assets/2e36764f-1876-4df3-8a29-b3e620a8647d"/>
+<img  height="550px" width="350px" src="https://github.com/user-attachments/assets/2e36764f-1876-4df3-8a29-b3e620a8647d"/>
 
 ## Android Studio Application - Firebase Database
 
